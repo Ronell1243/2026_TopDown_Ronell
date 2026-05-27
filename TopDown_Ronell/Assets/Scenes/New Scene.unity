@@ -188,7 +188,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: d4b0f469e52c6e64c81ab832c4a7500c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0b18b6ea53b3604da5d65ce84f3dc41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -212,21 +212,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 3
   spriteUp:
-  - {fileID: 21300000, guid: a578f4c9e09f85a499b25e343349f4f9, type: 3}
-  - {fileID: 21300000, guid: af4e7c9580870644ca91356ddbb33022, type: 3}
-  - {fileID: 21300000, guid: 4d841cab067bd2b45af0e8c75fc43eb8, type: 3}
+  - {fileID: 21300000, guid: f2d61afb007a88c449c9a4a7585c97ed, type: 3}
+  - {fileID: 21300000, guid: f2d61afb007a88c449c9a4a7585c97ed, type: 3}
+  - {fileID: 21300000, guid: f2d61afb007a88c449c9a4a7585c97ed, type: 3}
   spriteDown:
-  - {fileID: 21300000, guid: 0f0938d923403fc43b095931180695b5, type: 3}
-  - {fileID: 21300000, guid: d4b0f469e52c6e64c81ab832c4a7500c, type: 3}
-  - {fileID: 21300000, guid: 3359b0fb23f58174485f759e5c46327b, type: 3}
+  - {fileID: 21300000, guid: e0b18b6ea53b3604da5d65ce84f3dc41, type: 3}
+  - {fileID: 21300000, guid: e0b18b6ea53b3604da5d65ce84f3dc41, type: 3}
+  - {fileID: 21300000, guid: e0b18b6ea53b3604da5d65ce84f3dc41, type: 3}
   spriteLeft:
-  - {fileID: 21300000, guid: 1ff37e9322c45fc4493222d46f40b9fd, type: 3}
-  - {fileID: 21300000, guid: c5ff29277beb3f44880f67bb37cdcb97, type: 3}
-  - {fileID: 21300000, guid: 2a0d0f2f354681f45847dfedc8fd6ea6, type: 3}
+  - {fileID: 21300000, guid: 4fa662de7ad7ad7449f4f31610eed629, type: 3}
+  - {fileID: 21300000, guid: 4fa662de7ad7ad7449f4f31610eed629, type: 3}
+  - {fileID: 21300000, guid: 4fa662de7ad7ad7449f4f31610eed629, type: 3}
   spriteRight:
-  - {fileID: 21300000, guid: ae7391ddf17cc8a43aac85c0c8e8420b, type: 3}
-  - {fileID: 21300000, guid: facd1b8ae94ff364fb98d0fca6a71562, type: 3}
-  - {fileID: 21300000, guid: b88054f622c89434f971a99ab65ab28c, type: 3}
+  - {fileID: 21300000, guid: 82d47b207be8d374f8fcd24bbbbae859, type: 3}
+  - {fileID: 21300000, guid: 82d47b207be8d374f8fcd24bbbbae859, type: 3}
+  - {fileID: 21300000, guid: 82d47b207be8d374f8fcd24bbbbae859, type: 3}
   frameTime: 0.15
 --- !u!4 &11314605
 Transform:
