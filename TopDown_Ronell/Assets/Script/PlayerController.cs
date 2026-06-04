@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public Sprite[] spriteLeft;
     public Sprite[] spriteRight;
     public float frameTime = 0.15f;
+    public int playerHP = 0;
+    public int playerAttack = 0;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Vector2 input;
@@ -48,6 +50,10 @@ public class PlayerController : MonoBehaviour
 
         currentSprites = spriteDown;
         sr.sprite = currentSprites[0];
+
+        moveSpeed = GameDataManager.Instance.GetPlayerMoveSpeed();
+        playerHP = GameDataManager.Instance.GetPlayerHp();
+        playerAttack = GameDataManager.Instance.GetPlayerAttack();
     }
 
     private void Update()
@@ -87,5 +93,27 @@ public class PlayerController : MonoBehaviour
         frameIndex = 0;
         timer = 0f;
         sr.sprite = currentSprites[frameIndex];
+    }
+
+    void Start()
+    {
+        if(GameDataManager.Instance.isTutorialFinished == 0)
+        {
+            //튜토리얼을 안했을 경우 튜토리얼 오픈함
+            Debug.Log("튜토리얼 오픈!");
+            GameDataManager.Instance.isTutorialFinished = 1;
+        }
+        else
+        {
+            //튜토리얼을 했을 경우 아무것도 안함
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }
