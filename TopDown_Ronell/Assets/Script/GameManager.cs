@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public string titleSceneName = "TitleScene";
-    public string gameSceneName = "GameScene";
+    public string nextSceneName = "IntroCutScene";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(gameSceneName);   
+        SceneManager.LoadScene(nextSceneName);   
+    }
+
+    public void StartExit()
+    {
+        Application.Quit();
     }
 
     public void GameOver()

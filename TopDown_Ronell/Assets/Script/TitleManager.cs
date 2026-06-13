@@ -6,4 +6,10 @@ public class TitleManager : MonoBehaviour
     {
         GameManager.Instance.StartGame();
     }
+
+    public void GameExitButton()
+    {
+        GameManager.Instance.StartExit();
+        Debug.Log("게임 종료");
+    }    
 }
