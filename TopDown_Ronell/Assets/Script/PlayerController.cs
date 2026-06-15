@@ -51,9 +51,7 @@ public class PlayerController : MonoBehaviour
         currentSprites = spriteDown;
         sr.sprite = currentSprites[0];
 
-        moveSpeed = GameDataManager.Instance.GetPlayerMoveSpeed();
-        playerHP = GameDataManager.Instance.GetPlayerHp();
-        playerAttack = GameDataManager.Instance.GetPlayerAttack();
+        
     }
 
     private void Update()
@@ -97,7 +95,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if(GameDataManager.Instance.isTutorialFinished == 0)
+        moveSpeed = GameDataManager.Instance.GetPlayerMoveSpeed();
+        playerHP = GameDataManager.Instance.GetPlayerHp();
+        playerAttack = GameDataManager.Instance.GetPlayerAttack();
+
+        if (GameDataManager.Instance.isTutorialFinished == 0)
         {
             //Æ©Åä¸®¾óÀ» ¾ÈÇßÀ» °æ¿ì Æ©Åä¸®¾ó ¿ÀÇÂÇÔ
             Debug.Log("Æ©Åä¸®¾ó ¿ÀÇÂ!");
