@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         currentSprites = spriteDown;
         sr.sprite = currentSprites[0];
 
-        
+
     }
 
     private void Update()
