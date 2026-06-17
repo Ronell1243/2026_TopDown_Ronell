@@ -10,8 +10,6 @@ public class CutSceneManager : MonoBehaviour
     [Header("컷씬 리스트")]
     public Sprite[] cutSceneSprites; // 여기에 사용할 그림들을 순서대로 드래그 앤 드롭
 
-    public AudioSource audioSource;
-
     [Header("알람 소리")]
     public AudioClip specialSound1; // 재생할 효과음
     public int[] sound1TargetIndices;
@@ -71,33 +69,33 @@ public class CutSceneManager : MonoBehaviour
 
         if (IsTargetIndex(currentIndex, sound1TargetIndices))
         {
-            if (audioSource != null && specialSound1 != null)
+            if (SoundManager.Instance != null && specialSound1 != null)
             {
-                audioSource.PlayOneShot(specialSound1);
+                SoundManager.Instance.PlaySFX(specialSound1);
             }
         }
 
         if (IsTargetIndex(currentIndex, sound2TargetIndices))
         {
-            if (audioSource != null && specialSound2 != null)
+            if (SoundManager.Instance != null && specialSound2 != null)
             {
-                audioSource.PlayOneShot(specialSound2);
+                SoundManager.Instance.PlaySFX(specialSound2);
             }
         }
 
         if (IsTargetIndex(currentIndex, sound3TargetIndices))
         {
-            if (audioSource != null && specialSound3 != null)
+            if (SoundManager.Instance != null && specialSound3 != null)
             {
-                audioSource.PlayOneShot(specialSound3);
+                SoundManager.Instance.PlaySFX(specialSound3);
             }
         }
 
         if (IsTargetIndex(currentIndex, sound4TargetIndices))
         {
-            if (audioSource != null && specialSound4 != null)
+            if (SoundManager.Instance != null && specialSound4 != null)
             {
-                audioSource.PlayOneShot(specialSound4);
+                SoundManager.Instance.PlaySFX(specialSound4);
             }
         }
     }
