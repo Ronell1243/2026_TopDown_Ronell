@@ -2571,7 +2571,11 @@ MonoBehaviour:
   gameSettingData: {fileID: 0}
   saveData:
     deathCount: 0
+    totalCollectedItems: 0
+    bestClearTime: 999999
   isTutorialFinished: 0
+  currentItemCount: 0
+  elapsedTime: 0
 --- !u!1 &1282541260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,7 +3170,7 @@ MonoBehaviour:
   sfxSource: {fileID: 1622978767}
   titleBGM: {fileID: 8300000, guid: 368f2671f3b54f841b978fb5d17a73fa, type: 3}
   cutsceneBGM: {fileID: 8300000, guid: 368f2671f3b54f841b978fb5d17a73fa, type: 3}
-  inGameBGM: {fileID: 0}
+  inGameBGM: {fileID: 8300000, guid: 30df789fcdf152e408c76549f5de0541, type: 3}
 --- !u!82 &1622978767
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3179,7 +3183,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b5c59e1162bb7b145ac333318303f536, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

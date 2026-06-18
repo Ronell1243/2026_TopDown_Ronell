@@ -9,6 +9,16 @@ public class GameDataManager : MonoBehaviour
     public SaveData saveData;
     public int isTutorialFinished;
     private string savePath;
+    // 현재 스테이지 실시간 데이터
+    public int currentItemCount = 0;   // 현재 모은 아이템 개수
+    public float elapsedTime = 0f;     // 흘러간 시간 (초 단위)
+
+    // 게임 시작할 때 데이터를 초기화해주는 함수
+    public void ResetStageData()
+    {
+        currentItemCount = 0;
+        elapsedTime = 0f;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -50,6 +60,27 @@ public class GameDataManager : MonoBehaviour
     {
         return gameSettingData.playerMoveSpeed;
     }
+
+    public void GainItemJson()
+    {
+        currentItemCount++;               // 이번 판 수집량 증가
+        saveData.totalCollectedItems++;    // JSON 데이터 내부 누적 총 획득량 증가
+
+        SaveJsonData();                   // 변경된 데이터를 json 파일로 즉시 저장!
+    }
+
+    public void CheckAndSaveBestTime()
+    {
+        // 현재 걸린 시간이 기존 최고 기록보다 더 빠르다면 기록 갱신
+        if (elapsedTime < saveData.bestClearTime)
+        {
+            saveData.bestClearTime = elapsedTime;
+            Debug.Log($"최고 기록! 변경된 시간: {elapsedTime:F2}초");
+        }
+
+        SaveJsonData(); // 파일 저장
+    }
+
 
     //Json 파트
     public void SaveGameResult()
