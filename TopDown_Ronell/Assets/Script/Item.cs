@@ -37,7 +37,7 @@ public class Item : MonoBehaviour
 
             if (itemPickupSound != null && SoundManager.Instance != null)
             {
-               // SoundManager.Instance.PlaySFX(itemPickupSound); 
+               SoundManager.Instance.PlaySFX(itemPickupSound); 
             }
             // 3. 아이템 오브젝트 파괴
             Destroy(gameObject);
